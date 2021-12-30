@@ -1,0 +1,56 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Simple messaging app</title>
+
+
+    <link href="style.css" rel="stylesheet">
+  </head>
+    <body>
+        <div class="container">
+<!--
+            {% for arring in arr_list %}
+                <h2>{{ arring }}</h2>
+            {% endfor %}
+            
+            
+            <div class="message-old">
+                <p>Username</p>
+                <p>Date: </p>
+                <p>Message: </p>
+            </div>
+-->
+            
+            <div class="message-box">
+<!--
+                <form action=" " method="post">
+                {% csrf_token %}
+                <p><textarea rows="3" cols="15" name="username">Username</textarea></p>
+                <p><textarea rows="10" cols="45" name="message">Введіть ваше повідомлення</textarea></p>
+                <p><input type="submit" value="Відіслати"></p>
+                </form>
+-->
+                <h1>Create a Message </h1>
+                    <form action="" method="POST">
+                    {% csrf_token %}
+                    Username <input type="text" name="username"/><br/>
+                    Message: <br/>
+                    <textarea cols="35" rows="8" name="content">
+                    </textarea><br/>
+                    <input type="submit" value="Post"/>
+                    </form>
+            </div>
+            
+                <h2>Previous messages</h2>
+            
+                    {% for key, value in message.items %}
+                        <p>Username: {{ key }}</p>
+                        <p>Message: {{ value }}</p>
+                        <hr>
+                    {% endfor %}
+        </div>
+    </body>
+</html>

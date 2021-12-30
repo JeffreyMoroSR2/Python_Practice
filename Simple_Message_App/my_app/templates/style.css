@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: aquamarine;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.message-box{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 250px;
+    background-color: beige;
+    margin: 2px;
+    border: 1px solid black;
+}
