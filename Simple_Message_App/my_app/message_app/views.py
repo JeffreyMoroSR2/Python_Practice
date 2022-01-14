@@ -46,7 +46,7 @@ def index(request):
         conn = sqlite3.connect('db.sqlite3')
 
         cur = conn.cursor()
-        cur.execute("select username, content from message_app_post")
+        cur.execute("select username, content, dateSubmitted from message_app_post")
         rows = cur.fetchall()
         conn.close()
 
